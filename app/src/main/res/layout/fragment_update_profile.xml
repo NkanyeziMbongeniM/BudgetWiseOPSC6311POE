@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GOrangeF"
+    android:clipToPadding="false"
+    android:paddingBottom="90dp"
+    tools:context=".ui.user.UpdateProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Profile Picture Section -->
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp">
+
+            <!-- Profile Picture -->
+            <ImageView
+                android:id="@+id/profilePicture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_profile"
+                android:scaleType="centerCrop"
+                android:elevation="2dp"/>
+
+            <!-- Plus Button (Above Profile Picture) -->
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/circle_background"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="4dp"
+                android:elevation="6dp">
+
+                <ImageButton
+                    android:id="@+id/updateProfilePictureButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:src="@drawable/ic_add"
+                    android:scaleType="centerInside"
+                    android:elevation="7dp" />
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <!-- Input Fields -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@color/BlueP"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etSurname"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Surname"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@color/BlueP"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@color/BlueP"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@color/BlueP"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Date of Birth -->
+        <EditText
+            android:id="@+id/etDateOfBirth"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Date of Birth (YYYY-MM-DD)"
+            android:inputType="date"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@color/BlueP"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Location -->
+        <EditText
+            android:id="@+id/etLocation"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:inputType="textPostalAddress"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@color/BlueP"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etMonthlyBudget"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Monthly Budget"
+            android:inputType="numberDecimal"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:backgroundTint="@color/BlueP"
+            android:padding="12dp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveChanges"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Save Changes"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/BlueP"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

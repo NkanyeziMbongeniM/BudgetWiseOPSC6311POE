@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PROG7313_Part2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="set_budget_goals">Set Budget Goals</string>
+    <string name="maximum_goal">Maximum Goal</string>
+
+    <string-array name="categories">
+        <item>Food</item>
+        <item>Transportation</item>
+        <item>Entertainment</item>
+        <item>Utilities</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>

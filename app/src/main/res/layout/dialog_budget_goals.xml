@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_rounded_bg"
+    android:elevation="8dp"
+    android:layout_margin="16dp">
+
+    <!-- Dialog Title -->
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Budget Goals"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Minimum Goal Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Minimum Goal"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMinGoal"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxWidth="600dp"
+            android:textColor="@color/black"
+            android:textColorHint="#78909C"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Maximum Goal Input -->
+
+    <!-- Optional Submit Button -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:hint="Maximum Goal"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMaxGoal"
+            android:layout_width="332dp"
+            android:layout_height="57dp"
+            android:inputType="numberDecimal"
+            android:textColor="@color/BlackTransparent"
+            android:textColorHint="#78909C"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSetGoals"
+        android:layout_width="wrap_content"
+        android:maxWidth="300dp"
+        android:layout_height="wrap_content"
+        android:text="Set Goals"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/BlueP"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-medium"
+        android:elevation="2dp"
+        tools:ignore="HardcodedText" />
+</LinearLayout>

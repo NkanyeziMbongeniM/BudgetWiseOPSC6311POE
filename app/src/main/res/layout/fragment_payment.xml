@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GOrangeF"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.payment.PaymentFragment">
+
+    <!-- Payment Method Selection -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <!-- Visa Button -->
+        <ImageButton
+            android:id="@+id/visaButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/payment_unselected"
+            android:src="@drawable/visa_ic"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Mastercard Button (Pre-selected) -->
+        <ImageButton
+            android:id="@+id/mastercardButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/payment_selected"
+            android:src="@drawable/mastercard_ic"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- PayPal Button -->
+        <ImageButton
+            android:id="@+id/paypalButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/payment_unselected"
+            android:src="@drawable/paypal_ic"
+            android:scaleType="centerInside"/>
+
+    </LinearLayout>
+
+    <!-- Payment Details -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="8dp">
+
+        <!-- Card Number -->
+        <EditText
+            android:id="@+id/cardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Card Number"
+            android:inputType="number"
+            android:padding="12dp"
+            android:background="@drawable/input_background"
+            android:textSize="16sp"/>
+
+        <!-- Expiry Date & CVV -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/expiryDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="MM/YY"
+                android:inputType="number"
+                android:padding="12dp"
+                android:background="@drawable/input_background"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/cvv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="CVV"
+                android:inputType="number"
+                android:padding="12dp"
+                android:background="@drawable/input_background"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Name on Card -->
+        <EditText
+            android:id="@+id/cardHolderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cardholder Name"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@drawable/input_background"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Pay Button -->
+        <Button
+            android:id="@+id/payButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay Now"
+            android:backgroundTint="@color/BlueP"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+</LinearLayout>

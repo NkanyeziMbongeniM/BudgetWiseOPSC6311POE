@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@android:color/white"
+    android:elevation="4dp">
+
+    <!-- Brand Logo -->
+    <ImageView
+        android:id="@+id/brandIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_profile"/>
+
+    <!-- Brand Name -->
+    <TextView
+        android:id="@+id/brandName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="Brand Name"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:paddingStart="12dp"/>
+
+    <!-- Redeem Button -->
+    <Button
+        android:id="@+id/redeemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Redeem"
+        android:textSize="14sp"
+        android:backgroundTint="@color/BlueP"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

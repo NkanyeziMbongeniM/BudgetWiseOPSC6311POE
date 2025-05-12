@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GOrangeF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="90dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/appLogo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="8dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/app_logo" />
+
+            <TextView
+                android:id="@+id/User"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello!"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/BlueP"
+                android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:id="@+id/Welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome To Limits!"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/BlueP"
+                android:layout_marginBottom="24dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Budget Progress"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/BlueP"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_marginBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/totalBudget"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Total: R1500"
+                        android:textSize="16sp"
+                        android:textColor="@color/CyanS"/>
+
+                    <TextView
+                        android:id="@+id/totalSpent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Spent: R600"
+                        android:textSize="16sp"
+                        android:textColor="@color/CyanS"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/totalNet"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Net: R900"
+                        android:textSize="16sp"
+                        android:textColor="@color/CyanS"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/budgetProgress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:max="100"
+                    android:progress="40"
+                    android:progressTint="@color/CyanS"/>
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/spendingChart"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/Tertiary"
+                android:elevation="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:elevation="2dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="8dp"
+                android:radius="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Category"
+                    android:textColor="@color/BlueP"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <Spinner
+                    android:id="@+id/categorySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_background"
+                    android:padding="12dp"
+                    android:elevation="2dp"/>
+
+                <Button
+                    android:id="@+id/btnAddCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/CyanS"
+                    android:text="Add Category"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From:"
+                        android:textColor="@color/BlueP"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <EditText
+                        android:id="@+id/fromDateEditText"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:hint="Select Date"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:background="@drawable/input_background"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:paddingHorizontal="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To:"
+                        android:textColor="@color/BlueP"
+                        android:textSize="18sp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <EditText
+                        android:id="@+id/toDateEditText"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:hint="Select Date"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:background="@drawable/input_background"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:paddingHorizontal="12dp"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/filterButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Filter"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/BlueP"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="20dp"
+                    android:radius="12dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNoExpenses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="No expenses available"
+                android:textColor="@color/BlueP"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="32dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/rankTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gold Rank"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/BlueP"
+                    android:layout_marginBottom="8dp"/>
+
+                <ImageView
+                    android:id="@+id/rankImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/gold_rank"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XP Progress"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/BlueP"
+                    android:layout_marginBottom="4dp"/>
+
+                <ProgressBar
+                    android:id="@+id/rankProgress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:max="1000"
+                    android:progress="450"
+                    android:progressTint="@color/BlueP"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:id="@+id/rankStart"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="1000 XP"
+                        android:textSize="16sp"
+                        android:textColor="@color/BlueP"/>
+
+                    <TextView
+                        android:id="@+id/rankCurrent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="1450 XP"
+                        android:textSize="16sp"
+                        android:textColor="@color/CyanS"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/rankEnd"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="2000 XP"
+                        android:textSize="16sp"
+                        android:textColor="@color/Tertiary"
+                        android:gravity="end"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
